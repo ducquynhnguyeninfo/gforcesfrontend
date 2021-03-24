@@ -39,7 +39,7 @@ export class BaseService<T> {
   }
 
   create(data: any): Observable<T> {
-    return this.http.post<T>(this.baseUrl, data);
+    return this.http.post<T>(`${this.baseUrl}/`, data);
   }
 
   update(id: any, data: any): Observable<any> {
