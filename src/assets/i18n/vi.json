@@ -1,0 +1,53 @@
+{
+  "common": {
+    "order": "Đơn đặt hàng",
+    "brand": "Thương hiệu",
+    "model": "Mẫu xe",
+    "create_new": "Tạo mới",
+    "edit": "Sửa",
+    "delete": "Xoá",
+    "quantity": "Số lượng",
+    "total_price": "Tổng tiền",
+    "created_at": "Tạo lúc",
+    "client": "Khách hàng",
+    "model_name": "Tên mẫu xe",
+    "brand_name": "Tên hãng",
+    "description": "Mô tả",
+    "cancel": "Huỷ",
+    "create": "Tạo",
+    "optional": "Không bắt buộc",
+    "select_brand": "Chọn một thương hiệu.",
+    "new_order": "Tạo đơn hàng",
+    "add": "Thêm",
+    "ok": "Đồng ý",
+    "update" : "Sửa",
+    "price" : "Giá"
+  },
+  "title": {
+    "vehicle_selector_modal": "Chọn xe",
+    "add_brand_modal": "Thêm hãng sản xuât",
+    "add_model_modal": "Thêm mẫu xe",
+    "new_order_modal": "Tạo đơn hàng",
+    "delete_brand_modal": "Xoá thương hiệu"
+
+  },
+  "hint": {
+    "select_model" : "Chọn mẫu xe.",
+    "client": "Nhập tên khách hàng",
+    "brand_name": "Nhập tên hãng sản xuất.",
+    "brand_description": "Một vài thông tin về hãng sản xuất.",
+    "model_name": "Nhập tên mẫu xe.",
+    "model_description": "A litle bit information of the brand name.",
+    "order_client": "Input the vehicle manufacture brand name.",
+    "order_description": "A litle bit information of the brand name.",
+    "model_price": "Nhập giá mẫu xe."
+  },
+  "errors": {
+    "brand_name_required" : "Tên thương hiệu không được để trống."
+  },
+  "message": {
+    "delete_brand": "Bạn có muốn xoá thương hiệu \"{{name}}\" không?",
+    "delete_model": "Bạn có muốn xoá mẫu xe \"{{name}}\" không?",
+    "delete_order": "Bạn có muốn xoá đơn đặt hàng \"{{name}}\" không?"
+  }
+}

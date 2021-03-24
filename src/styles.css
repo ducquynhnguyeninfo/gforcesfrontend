@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/material.theme.css";
+
+body {
+  font-size: .875rem;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+.detail-view {
+  margin-top: 20px;
+}

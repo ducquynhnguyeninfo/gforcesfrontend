@@ -1,0 +1,20 @@
+<div *ngIf="data">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-title" [innerHTML]="data.title"></h4>
+    <div (click)="crossClicked()" class="close-modal-button icon-close-modal-wrapper">
+      <span class="icon-close-modal" aria-hidden="true"></span>
+      <i class="icon icon-cross"></i>
+    </div>
+  </div>
+  <div class="modal-body">
+    <div [innerHTML]="data.body"></div>
+  </div>
+  <div class="modal-footer">
+    <button [hidden]="!data.isPrompt" type="button" class="btn btn-default" (click)="cancelClicked()" tabindex="-1">
+      <span translate="common.cancel"></span>
+    </button>
+    <button type="button" class="btn btn-primary" (click)="closeModal()" tabindex="1" [autofocus]="!data.isPrompt">
+      <span translate="common.ok"></span>
+    </button>
+  </div>
+</div>

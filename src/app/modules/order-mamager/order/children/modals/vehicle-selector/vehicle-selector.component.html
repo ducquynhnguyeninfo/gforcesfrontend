@@ -1,0 +1,51 @@
+<!-- <ng-template #longContent let-modal> -->
+<div class="modal-header">
+  <h4 class="modal-title">{{"title.vehicle_selector_modal" | translate}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="container">
+
+    <div class="mb-3">
+      <label for="brandname">{{"common.brand" | translate}}</label>
+      <input type="text" class="form-control" id="brandname" placeholder="{{'common.select_brand' | translate}}"
+        [(ngModel)]="brand" [ngbTypeahead]="search" (focus)="focus$.next($any($event).target.value)"
+        #instance="ngbTypeahead" (click)="click$.next($any($event).target.value)" required
+        [ngModelOptions]="{standalone: true}">
+      <div class="invalid-feedback" style="width: 100%;">
+        The Client name is required.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="brandname">{{"common.model" | translate}}</label>
+      <input type="text" class="form-control" id="brandname" placeholder="{{'hint.select_model' | translate}}"
+        [(ngModel)]="model" [ngbTypeahead]="search" (focus)="focus$.next($any($event).target.value)"
+        #instance="ngbTypeahead" (click)="click$.next($any($event).target.value)" required
+        [ngModelOptions]="{standalone: true}">
+      <div class="invalid-feedback" style="width: 100%;">
+        The Client name is required.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <div class="d-flex justify-content-between">
+        <label for="clientname">{{"common.quantity" | translate}}</label>
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-outline-secondary">-</button>
+          <input type="number" class="form-control" value="1">
+          <button type="button" class="btn btn-outline-secondary">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" (click)="activeModal.close()" translate="common.cancel">
+  </button>
+  <button type="button" class="btn btn-info" (click)="activeModal.close('Close click')" translate="common.add"></button>
+</div>
+<!-- </ng-template> -->

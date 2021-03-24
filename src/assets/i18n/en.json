@@ -1,0 +1,55 @@
+{
+  "common": {
+    "order": "Order",
+    "brand": "Brand",
+    "model": "Model",
+    "create_new": "Create new",
+    "edit": "Edit",
+    "delete": "Delete",
+    "quantity": "Quantity",
+    "total_price": "Total Price",
+    "created_at": "Created At",
+    "client": "Client",
+    "model_name": "Model Name",
+    "brand_name": "Brand Name",
+    "description": "Description",
+    "cancel": "Cancel",
+    "create": "Create",
+    "optional": "Optional",
+    "select_brand": "Type or select a brand name",
+    "new_order": "New order",
+    "add": "Add",
+    "ok": "Yes",
+    "update" : "Update",
+    "price" : "Price"
+  },
+  "title": {
+    "vehicle_selector_modal": "Select you new vehicle",
+    "add_brand_modal": "Add manufacture name",
+    "add_model_modal": "Add vehicle model",
+    "new_order_modal": "New order",
+    "delete_brand_modal": "Remove brand",
+    "delete_model_modal": "Remove vehicle model",
+    "delete_order_modal": "Remove order"
+
+  },
+  "hint": {
+    "select_model" : "Select vehicle model.",
+    "client": "Input client name",
+    "brand_name": "Input the vehicle manufacture brand name.",
+    "brand_description": "A litle bit information of the brand name.",
+    "model_name": "Input the model name.",
+    "model_description": "A litle bit information of the brand name.",
+    "order_client": "Input the vehicle manufacture brand name.",
+    "order_description": "A litle bit information of the brand name.",
+    "model_price": "Vehicle model price."
+  },
+  "errors": {
+    "brand_name_required" : "The name is required."
+  },
+  "message": {
+    "delete_brand": "Do you really want to delete the brand \"{{name}}\"?",
+    "delete_model": "Do you really want to delete the vehicle model \"{{name}}\"?",
+    "delete_order": "Do you really want to delete the order \"{{name}}\"?"
+  }
+}

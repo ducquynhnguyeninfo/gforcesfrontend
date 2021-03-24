@@ -1,0 +1,38 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{"title.add_brand_modal" | translate}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<form [formGroup]="brandDetailForm" (ngSubmit)="onAddButtonClicked(submitButton)">
+  <div class="modal-body">
+    <div class="container">
+
+      <div class="mb-3">
+        <label for="brandname">{{"common.brand_name" | translate}}</label>
+        <input type="text" class="form-control" id="brandname" formControlName="brandname"
+          placeholder="{{'hint.brand_name' | translate}}" [(ngModel)]="this.model.name" required>
+        <div *ngIf="brandnameFC!.invalid && (brandnameFC!.dirty || brandnameFC!.touched)" class="alert alert-danger">
+          <div *ngIf="brandnameFC!.errors!.required">
+            {{"errors.brand_name_required" | translate}}
+          </div>
+
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description">{{"common.description" | translate}} <span class="text-muted">({{"common.optional" |
+            translate}})</span></label>
+        <textarea type="text" class="form-control" id="description" formControlName="description"
+          [(ngModel)]="this.model.description" placeholder="{{'hint.brand_description' | translate}}"></textarea>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="activeModal.close()" translate="common.cancel">
+    </button>
+    <button type="submit" class="btn btn-info" translate="{{this.is_update ? 'common.update' : 'common.add'}}" [disabled]="!brandDetailForm.valid" #submitButton ></button>
+  </div>
+</form>

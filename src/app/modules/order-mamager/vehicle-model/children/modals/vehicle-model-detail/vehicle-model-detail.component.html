@@ -1,0 +1,56 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{"title.add_model_modal" | translate}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<form [formGroup]="mainForm" (ngSubmit)="onSubmitButtonClicked(submitButton)">
+  <div class="modal-body">
+    <div class="container">
+
+      <div class="mb-3">
+        <label for="modelname">{{"common.model" | translate}}</label>
+        <input type="text" class="form-control" id="modelname" formControlName="name"
+          placeholder="{{'hint.model_name' | translate}}" required>
+        <div class="invalid-feedback" style="width: 100%;">
+          The Client name is required.
+        </div>
+      </div>
+      <div class="mb-3" *ngIf="allBrands.length > 0">
+        <label for="brandname">{{"common.brand" | translate}}</label>
+
+        <!-- <select (change)="setBrand($event)" formControlName="brand" class="form-control"  (ngInit)="selectbrand" id="brandname">
+          <option [ngValue]="null" disabled>Choose your brand</option>
+          <option *ngFor="let br of allBrands" [ngValue]="br" selected="br.id===selectbrand.id">{{br.name}}</option>
+        </select> -->
+        <ng-select (onchange)="setBrand($event)" [items]="allBrands" bindLabel="name" [multiple]="false" [searchable]="true" [clearable]="true"
+          [(ngModel)]="selectbrand" [ngModelOptions]="{standalone: true}">
+        </ng-select>
+      </div>
+
+      <div class="mb-3">
+        <label for="price">{{"common.price" | translate}}</label>
+        <input type="text" class="form-control" id="price" formControlName="price"
+          placeholder="{{'hint.model_price' | translate}}" required>
+        <div class="invalid-feedback" style="width: 100%;">
+          The Client name is required.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description">{{"common.description" | translate}} <span class="text-muted">({{"common.optional" |
+            translate}})</span></label>
+        <textarea type="text" class="form-control" id="description" formControlName="description"
+          placeholder="{{'hint.model_description' | translate}}"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="activeModal.close()" translate="common.cancel">
+    </button>
+    <button type="submit" class="btn btn-info" translate="{{this.is_update ? 'common.update' : 'common.add'}}"
+      [disabled]="!mainForm.valid" #submitButton></button>
+  </div>
+</form>
