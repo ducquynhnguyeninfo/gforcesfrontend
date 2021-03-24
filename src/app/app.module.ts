@@ -49,7 +49,7 @@ export function httpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     OrderMamagerModule,
     OrderManagerRoutingModule,
     CommonUIModule,
-    RepositoriesModule.forRoot({ rootUrl: '/api/v1' }),
+    RepositoriesModule.forRoot({ rootUrl: environment.apiUrl + '/api/v1' }),
   ],
   providers: [],
   bootstrap: [AppComponent],

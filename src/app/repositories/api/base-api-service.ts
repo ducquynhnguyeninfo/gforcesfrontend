@@ -31,7 +31,7 @@ export class BaseService<T> {
   }
 
   getAll(): Observable<T[]> {
-    return this.http.get<T[]>(this.baseUrl);
+    return this.http.get<T[]>(`${this.baseUrl}/`);
   }
 
   get(id: any): Observable<T> {

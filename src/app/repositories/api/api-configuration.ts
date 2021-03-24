@@ -1,5 +1,6 @@
 /* tslint:disable */
 import { Injectable } from '@angular/core';
+import { environment } from './../../../environments/environment';
 
 
 /**
@@ -9,7 +10,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ApiConfiguration{
-  rootUrl: string = '/api/v1';
+  rootUrl: string = environment.apiUrl + '/api/v1';
 }
 export interface ApiConfigurationInterface {
   rootUrl?: string;

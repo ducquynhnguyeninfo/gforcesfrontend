@@ -12,7 +12,7 @@ export class OrderService {
   constructor(private api: OrderApiService) {
   }
 
-  getAllBrands(): Observable <Order[]> {
+  getAll(): Observable <Order[]> {
     return this.api.getAll();
   }
 

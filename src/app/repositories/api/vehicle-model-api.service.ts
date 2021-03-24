@@ -14,6 +14,6 @@ export class VehicleModelApiService extends BaseService<VehicleModel> {
     http: HttpClient
   ) {
     super(config, http);
-    this.baseUrl = `${this.config.rootUrl}/vehiclemodels/`;
+    this.baseUrl = `${this.config.rootUrl}/vehiclemodels`;
   }
 }

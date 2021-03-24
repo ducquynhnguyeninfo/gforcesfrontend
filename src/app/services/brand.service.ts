@@ -11,9 +11,7 @@ import { BrandVO } from '../repositories/vo/brand-vo.model';
 export class BrandService {
 
   constructor(private api: BrandApiService) {
-
   }
-
 
   getAllBrands(): Observable <Brand[]> {
     return this.api.getAll();

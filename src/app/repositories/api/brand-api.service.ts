@@ -15,6 +15,6 @@ export class BrandApiService extends BaseService<Brand> {
     http: HttpClient
   ) {
     super(config, http);
-    this.baseUrl = `${this.config.rootUrl}/brands/`;
+    this.baseUrl = `${this.config.rootUrl}/brands`;
   }
 }
