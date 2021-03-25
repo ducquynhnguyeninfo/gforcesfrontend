@@ -29,7 +29,7 @@
       <tr *ngFor="let mo of allModels; let i = index">
         <td>{{i+1}}</td>
         <td>{{mo.name}}</td>
-        <td>{{mo.brand!.name}}</td>
+        <td>{{mo.brand?.name}}</td>
         <td>{{mo.price}}</td>
         <td>{{mo.description}}</td>
         <td>

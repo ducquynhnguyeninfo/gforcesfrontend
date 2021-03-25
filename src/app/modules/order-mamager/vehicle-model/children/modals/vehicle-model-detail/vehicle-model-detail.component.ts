@@ -39,9 +39,10 @@ export class VehicleModelDetailComponent implements OnInit {
 
   is_update = false;
 
-  // @Input()
+
   selectbrand: Brand = {};
-  // @Input()
+  selectbrandId = '';
+
   model: VehicleModel = {
     name: '',
     brand: this.selectbrand,
@@ -81,13 +82,18 @@ export class VehicleModelDetailComponent implements OnInit {
     console.log(this.selectbrand);
   }
 
+  compareWith(object1: any, object2: any) {
+    console.log(object1);
+    console.log(object2);
+    return object2.id === object1.id;
+  }
+
   onSubmitButtonClicked(submitBtn: HTMLButtonElement): void {
     submitBtn.disabled = true;
     if (this.mainForm.valid) {
       if (this.is_update) {
         const newData = this.mainForm.value;
         newData.id = this.model.id;
-        newData.picture = '';
         newData.brand = this.selectbrand;
 
         // tslint:disable-next-line: no-non-null-assertion
@@ -103,7 +109,6 @@ export class VehicleModelDetailComponent implements OnInit {
           });
       } else {
         const newData = this.mainForm.value;
-        newData.picture = 'empty';
         newData.brand = this.selectbrand;
         // tslint:disable-next-line: no-non-null-assertion
         this.vehicleModelService.create(newData).subscribe(response => {
