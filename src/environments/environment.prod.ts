@@ -1,5 +1,4 @@
 export const environment = {
   production: true,
-  
-  // apiUrl: 'https://gforcevehicle.herokuapp.com'
+  apiUrl: 'https://gforcevehicle.herokuapp.com'
 };
